@@ -1,0 +1,106 @@
+{
+  "version": "1.6.0",
+  "date": "2026-10-09",
+  "direction": "Divi 4 to Elementor",
+  "scope": "Local WordPress source/target page selection without JSON upload",
+  "environment": {
+    "wordpress": "7.1.2",
+    "elementor": "4.3.3",
+    "uae": "2.9.5",
+    "php": "8.3.35",
+    "databases": [
+      "SQLite",
+      "MariaDB 11.4.11"
+    ],
+    "divi_runtime_installed": false
+  },
+  "wordpress_regressions": {
+    "sqlite": {
+      "suites": 25,
+      "assertions": 4464,
+      "passed": true
+    },
+    "mariadb": {
+      "suites": 25,
+      "assertions": 4464,
+      "passed": true
+    }
+  },
+  "standalone": {
+    "8.3.35": {
+      "suites": 17,
+      "assertions": 746,
+      "pipeline_passed": true
+    },
+    "8.0.30": {
+      "suites": 17,
+      "assertions": 746,
+      "pipeline_passed": true
+    }
+  },
+  "browser": {
+    "assertions": 44,
+    "widths": [
+      1232,
+      816,
+      746,
+      298
+    ],
+    "passed": true,
+    "real_admin_source_and_target_ID_forms": true,
+    "analysis_then_saved_apply_same_job": true,
+    "source_unchanged": true,
+    "rollback_verified": true,
+    "javascript_errors": []
+  },
+  "gallery_root_cause": "CommonConverter emitted gallery but installed Elementor image-gallery registers and renders wp_gallery. Native mapping, bounded strict IDs and current attachment validation added.",
+  "menu_root_cause": "Pending menu discovery ignored inherited preset menu IDs; it now resolves supported presets before showing mappings.",
+  "package": {
+    "version": "1.6.0",
+    "public_download": "ace-divi-to-elementor-migrator-1.6.0.zip",
+    "files": 189,
+    "bytes": 1575215,
+    "sha256": "1649c2bf7c273360c55e4cdb97b57b507a30b49e8addd71f411f4cb741868428",
+    "syntax": [
+      {
+        "runtime": "8.3.35",
+        "files": 223,
+        "passed": true
+      },
+      {
+        "runtime": "8.0.30",
+        "files": 223,
+        "passed": true
+      }
+    ],
+    "source_matches_archive": true,
+    "tests_and_private_fixtures_excluded": true
+  },
+  "plugin_check": {
+    "installed_zip": true,
+    "runtime": true,
+    "findings": []
+  },
+  "qa_inventory": {
+    "features": 107,
+    "method_class_rows": 401,
+    "registered_source_tags": 36
+  },
+  "limitations": [
+    "Divi 5 and Elementor-to-Divi conversion not implemented.",
+    "Actual Divi runtime/storage variants, inherited Theme Customizer values and full source/editor visual parity require staging acceptance.",
+    "Sitewide CSS, theme templates, conditions and custom-font registration are separate workflows.",
+    "Pro/Woo providers, PHP 7.4 and WordPress minimum runtimes remain outside local acceptance.",
+    "Gallery acceptance covers local native attachment grids; full source gallery designs and slider modes remain partial."
+  ],
+  "live_site_changed": false,
+  "prior_versioned_release_preserved": true,
+  "qa_services": {
+    "user_services_changed": false,
+    "verified_executables": true,
+    "database_pid": 26216,
+    "php_pid": 27268,
+    "qa_services_stopped": true,
+    "date": "2026-10-09"
+  }
+}

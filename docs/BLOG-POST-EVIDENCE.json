@@ -1,0 +1,132 @@
+{
+  "version": "1.5.0",
+  "date": "2026-10-09",
+  "scope": "Ordinary post targets and bounded core Divi Blog listings",
+  "environment": {
+    "wordpress": "7.1.2",
+    "elementor": "4.3.3",
+    "uae": "2.9.5",
+    "php": "8.3.35",
+    "databases": [
+      "SQLite",
+      "MariaDB 11.4.11"
+    ]
+  },
+  "customer_source": {
+    "divi": "4.16",
+    "sha256": "bd549755d444e707272f28ecac96d98fc3b7a2a71cd88bd90cc8b3df2ccf6e50",
+    "native_article_markup_verbatim": true,
+    "private_fixture_distributed": false
+  },
+  "official_blog_source": {
+    "divi": "4.8.2",
+    "preset_resolved": true,
+    "accepted_default_query_design_is_partial": true
+  },
+  "standalone": {
+    "8.3.35": {
+      "suites": 17,
+      "assertions": 746,
+      "pipeline_passed": true
+    },
+    "8.0.30": {
+      "suites": 17,
+      "assertions": 746,
+      "pipeline_passed": true
+    }
+  },
+  "wordpress_regressions": {
+    "sqlite": {
+      "suites": 24,
+      "assertions": 4383,
+      "passed": true
+    },
+    "mariadb": {
+      "suites": 24,
+      "assertions": 4383,
+      "passed": true
+    }
+  },
+  "final_installed_post_blog_tests": [
+    {
+      "backend": "sqlite",
+      "assertions": 52,
+      "passed": true
+    },
+    {
+      "backend": "mariadb",
+      "assertions": 52,
+      "passed": true
+    }
+  ],
+  "browser": {
+    "assertions": 207,
+    "passed": true,
+    "viewport_widths": [
+      1440,
+      1024,
+      980,
+      768,
+      767,
+      390,
+      320
+    ],
+    "viewport_transitions": [
+      1440,
+      390,
+      1024,
+      767,
+      320,
+      980,
+      1440
+    ],
+    "featured_image_crop": "8:5 cover",
+    "independent_pagination": true,
+    "actual_export_admin_upload_and_explicit_post_id": true
+  },
+  "masonry_resize_root_cause": "Stale inline grid placements created implicit tracks; reset placement before measuring each layout.",
+  "rollback_root_cause": "Unnecessary unchanged-body wp_update_post reset a draft date; skip unchanged body and explicitly preserve edit date for changed-body restores.",
+  "plugin_check": {
+    "installed_zip": true,
+    "runtime_checks": true,
+    "findings": []
+  },
+  "package": {
+    "version": "1.5.0",
+    "public_download": "ace-divi-to-elementor-migrator-1.5.0.zip",
+    "files": 186,
+    "bytes": 1562968,
+    "sha256": "abd7027331d1585ab451b42ef68c1fc8f46a9dea6e06e1e1bb783da8a4a8adbb",
+    "syntax": [
+      {
+        "runtime": "8.3.35",
+        "files": 219,
+        "passed": true
+      },
+      {
+        "runtime": "8.0.30",
+        "files": 219,
+        "passed": true
+      }
+    ],
+    "source_matches_archive": true,
+    "tests_and_private_fixtures_excluded": true
+  },
+  "qa_inventory": {
+    "feature_areas": 104,
+    "method_class_rows": 388,
+    "registered_source_tags": 36
+  },
+  "limitations": [
+    "Core Blog retains PARTIAL status: omitted source defaults, grid geometry and global theme differences need source comparison.",
+    "Full-content/archive/CPT/custom-overlay/card-shadow queries remain protected or need an explicit native template replacement.",
+    "Post database transfer and single-post Theme Builder conditions are separate workflows.",
+    "Ace must stay active for Ace Post Grid.",
+    "Interactive Elementor editor, complete source visual parity, Pro/Woo providers, minimum PHP/WordPress runtimes and live destination themes are not accepted here."
+  ],
+  "live_site_content_changed": false,
+  "qa_services": {
+    "stopped": true,
+    "user_services_changed": false
+  }
+}

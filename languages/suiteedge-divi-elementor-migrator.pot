@@ -1,0 +1,1397 @@
+# Copyright (C) 2026 Ace
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ace Migrator for Divi and Elementor 1.7.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ace-divi-elementor-migrator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-10T00:11:16+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: suiteedge-divi-elementor-migrator\n"
+
+#. Plugin Name of the plugin
+#: suiteedge-divi-elementor-migrator.php
+#: src/Plugin.php:52
+msgid "Ace Migrator for Divi and Elementor"
+msgstr ""
+
+#. Description of the plugin
+#: suiteedge-divi-elementor-migrator.php
+msgid "Convert supported Divi 4 and Classic Elementor page layouts in both directions, with coverage reports, saved Apply and protected rollback."
+msgstr ""
+
+#. Author of the plugin
+#: suiteedge-divi-elementor-migrator.php
+msgid "Ace"
+msgstr ""
+
+#: src/Admin/AnalysisPage.php:7
+msgid "Module Coverage & Analysis"
+msgstr ""
+
+#: src/Admin/AnalysisPage.php:7
+msgid "Review which modules appear in your exports. An available mapping still needs visual review."
+msgstr ""
+
+#: src/Admin/AnalysisPage.php:9
+msgid "No module scan yet"
+msgstr ""
+
+#: src/Admin/AnalysisPage.php:9
+msgid "Upload a Divi export to see module coverage for your layouts."
+msgstr ""
+
+#: src/Admin/AnalysisPage.php:9
+#: src/Admin/MappingPage.php:13
+msgid "Upload layouts"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:5
+#: src/Admin/GuidePage.php:5
+#: src/Admin/SettingsPage.php:5
+msgid "You do not have permission to access this page."
+msgstr ""
+
+#: src/Admin/DashboardPage.php:6
+msgid "Move your layouts. Keep control."
+msgstr ""
+
+#: src/Admin/DashboardPage.php:6
+msgid "Convert supported Divi 4 pages or exports into editable Elementor layouts. Review the result, then apply it to the destination you choose."
+msgstr ""
+
+#: src/Admin/DashboardPage.php:7
+msgid "YOUR FIRST MIGRATION"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:7
+msgid "From Divi to editable Elementor page"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:9
+msgid "Choose a source"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:9
+msgid "Select a Divi page on this site, or upload Divi 4 exports for a batch or a different source site."
+msgstr ""
+
+#: src/Admin/DashboardPage.php:10
+msgid "Choose destinations and convert"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:10
+msgid "Match each layout to a page or a new draft. Convert first to save an Elementor template and a report."
+msgstr ""
+
+#: src/Admin/DashboardPage.php:11
+msgid "Review, apply, and check"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:11
+msgid "Resolve blockers, review warnings, and apply the saved result. Check desktop, tablet, mobile, and interactions in Elementor."
+msgstr ""
+
+#: src/Admin/DashboardPage.php:14
+#: src/Admin/GuidePage.php:9
+msgid "Convert a site page"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:14
+msgid "Import JSON exports"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:14
+msgid "Your migration environment"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:17
+msgid "Divi 4 reverse Apply"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:17
+#: src/Admin/DashboardPage.php:19
+#: src/Admin/DashboardPage.php:20
+msgid "Available"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:17
+msgid "Activate Divi 4 for reverse Apply"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:18
+msgid "Active"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:18
+msgid "Activate Elementor"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:19
+msgid "UAE headers / footers"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:19
+msgid "Optional plugin"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:20
+msgid "Apply permission"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:20
+msgid "Restricted"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:23
+msgid "Back up your site and run your first migration on staging. Module support varies; the report records differences that need your review."
+msgstr ""
+
+#: src/Admin/DashboardPage.php:23
+msgid "Requirements & supported scope"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:24
+msgid "BEYOND PAGE CONTENT"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:24
+msgid "Migrate your global header and footer"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:24
+msgid "Divi Theme Builder exports use a separate workflow. Convert them to UAE Header or Footer templates and keep existing destination display rules."
+msgstr ""
+
+#: src/Admin/DashboardPage.php:24
+msgid "Open Header & Footer migrator"
+msgstr ""
+
+#: src/Admin/DashboardPage.php:25
+msgid "Continue your work"
+msgstr ""
+
+#. translators: %d: number of migration jobs belonging to the current user.
+#: src/Admin/DashboardPage.php:27
+#, php-format
+msgid "You have %d migration jobs in your account. Open a report, apply a completed result, or review a rollback."
+msgstr ""
+
+#: src/Admin/DashboardPage.php:28
+#: src/Admin/ReportPage.php:10
+msgid "View migration jobs"
+msgstr ""
+
+#: src/Admin/GuidePage.php:6
+#: src/Admin/Menu.php:34
+#: src/Admin/View.php:15
+msgid "User Guide"
+msgstr ""
+
+#: src/Admin/GuidePage.php:6
+msgid "A practical guide to preparing, converting, reviewing, and applying your layouts."
+msgstr ""
+
+#: src/Admin/GuidePage.php:8
+msgid "Quick start"
+msgstr ""
+
+#: src/Admin/GuidePage.php:10
+#: src/Admin/Menu.php:31
+#: src/Admin/ReversePage.php:26
+#: src/Admin/View.php:12
+msgid "Elementor to Divi"
+msgstr ""
+
+#: src/Admin/GuidePage.php:11
+msgid "Headers & footers"
+msgstr ""
+
+#: src/Admin/GuidePage.php:12
+msgid "Choosing settings"
+msgstr ""
+
+#: src/Admin/GuidePage.php:13
+msgid "Understanding results"
+msgstr ""
+
+#: src/Admin/GuidePage.php:14
+msgid "Troubleshooting"
+msgstr ""
+
+#: src/Admin/GuidePage.php:15
+msgid "Requirements & scope"
+msgstr ""
+
+#: src/Admin/GuidePage.php:16
+msgid "Your data & privacy"
+msgstr ""
+
+#: src/Admin/GuidePage.php:18
+msgid "Guide contents"
+msgstr ""
+
+#: src/Admin/GuidePage.php:22
+msgid "1. Prepare on staging. Back up the entire site. Activate Elementor and keep your Divi source available for comparison."
+msgstr ""
+
+#: src/Admin/GuidePage.php:23
+msgid "2. Export from Divi 4. Open the page in Divi Builder, choose Portability, then Export. Save the layout as JSON. A page export contains page content; it does not include global Theme Builder templates."
+msgstr ""
+
+#: src/Admin/GuidePage.php:24
+msgid "3. Upload in Pages. Select up to 24 JSON files, then Upload and Scan. Each file may contain several layouts. Review module coverage if you use add-on modules."
+msgstr ""
+
+#: src/Admin/GuidePage.php:25
+msgid "4. Map and convert. Select layouts and assign each one to a distinct destination page or a new draft. Check the source origin and theme defaults. Convert Selected saves a result for review; it changes neither the assigned page nor the Media Library. Image import happens during Apply when enabled."
+msgstr ""
+
+#: src/Admin/GuidePage.php:26
+msgid "5. Review the report. Fix blocking errors and review warnings. Download an Elementor template if you prefer a manual import. Template import does not apply content to the page selected in this plugin."
+msgstr ""
+
+#: src/Admin/GuidePage.php:27
+msgid "6. Apply the saved result. In Migration Jobs, use Apply to Page / Post or select completed results and use Apply Selected. The existing job and original destination are reused. A published target with warnings requires your review acknowledgement."
+msgstr ""
+
+#: src/Admin/GuidePage.php:28
+msgid "7. Verify before publishing. Open the target in Elementor. Check desktop, tablet, and mobile; test links, menus, accordions, buttons, images, and forms. New targets stay as drafts until you publish them."
+msgstr ""
+
+#: src/Admin/GuidePage.php:31
+msgid "Open Convert Site Page. Select a Divi 4 source page and a target page on this WordPress site, or create a new draft. You can explicitly choose the source itself for in-place migration. Older pages can be selected by ID."
+msgstr ""
+
+#: src/Admin/GuidePage.php:32
+msgid "Select pages and review settings captures the page content, stored Divi 4 presets and readable referenced Divi Library globals privately. It does not change either page. Each selection lasts one hour and can create one job; separate browser tabs have separate selections."
+msgstr ""
+
+#: src/Admin/GuidePage.php:33
+msgid "Review the selected destination, verified local menu/category suggestions, dynamic link mappings and inherited Source theme defaults. These defaults are not a complete import of your Divi Theme Customizer or sitewide custom CSS."
+msgstr ""
+
+#: src/Admin/GuidePage.php:34
+msgid "Convert for review saves the result and report without changing the target. In Migration Jobs, Apply to Page uses that result on the same job. Convert and apply to page converts and writes directly after validation. Apply preserves the target title, URL, status and SEO and saves a rollback backup."
+msgstr ""
+
+#: src/Admin/GuidePage.php:35
+msgid "If the source, stored presets or referenced globals change after selection, applying is blocked. Select the pages again for a fresh conversion. New target edits are also protected. Rollback restores migration-owned builder fields; source content, media and drafts are retained."
+msgstr ""
+
+#: src/Admin/GuidePage.php:36
+msgid "Convert Site Page handles Divi 4 to Elementor. Use the separate Elementor to Divi screen for reverse page conversion. Divi 5 and whole-site theme migration are outside these workflows. Use Headers & Footers for Divi Theme Builder exports."
+msgstr ""
+
+#: src/Admin/GuidePage.php:39
+msgid "Open Elementor to Divi, select a current Elementor page and a Divi destination or a new draft, then review the assignment. No JSON upload is required."
+msgstr ""
+
+#: src/Admin/GuidePage.php:40
+msgid "Convert for review saves Divi output and per-element coverage without changing either page. Resolve blockers, then use the saved Apply action in Migration Jobs. Apply requires Divi 4 and every needed module provider. Backups and rollback cover the written content and builder state."
+msgstr ""
+
+#: src/Admin/GuidePage.php:41
+msgid "Unchanged local forward migrations created with 1.7.0 can restore their exact original Divi source while the recorded Elementor/global/source dependencies still match. Other pages use semantic adapters. Unsupported widgets/settings, nested layouts, Pro form delivery and loops remain protected. Accept native Divi editing, fonts and responsive rendering on staging before publishing."
+msgstr ""
+
+#: src/Admin/GuidePage.php:44
+msgid "Export each Header or Footer layout separately from Divi Theme Builder. Open Headers & Footers here, upload the JSON, and choose Map Header / Footer templates."
+msgstr ""
+
+#: src/Admin/GuidePage.php:45
+msgid "Ultimate Addons for Elementor (UAE, formerly Elementor Header & Footer Builder) must be active. Choose an existing UAE Header or Footer, or create a draft of the matching type. Regular pages are separate destinations."
+msgstr ""
+
+#: src/Admin/GuidePage.php:46
+msgid "Divi JSON contains menu IDs, not menu links. Create or import the destination menu in Appearance > Menus, then select it in Navigation menu mappings. Review any Main Menu suggestion."
+msgstr ""
+
+#: src/Admin/GuidePage.php:47
+msgid "Optional source menu image lookup reads the public source header/footer to restore omitted menu-label images. It reports differences in labels or hierarchy and never rewrites your shared WordPress menu."
+msgstr ""
+
+#: src/Admin/GuidePage.php:48
+msgid "Convert, review, then Apply to UAE Template. Existing display rules, exclusions, and roles are preserved. New drafts have no assignments: configure their UAE display conditions and publish them before they appear on your site."
+msgstr ""
+
+#: src/Admin/GuidePage.php:51
+msgid "Import images / Reuse Media Library: embedded images are tried first, then allowed external URLs. Exact matches can be reused. Imported attachments are retained after rollback. Leave both enabled for a typical migration."
+msgstr ""
+
+#: src/Admin/GuidePage.php:52
+msgid "Source site URL: enter the original Divi site, for example https://source.example. A pasted page URL is normalized to its scheme and host. Check suggestions inferred from media URLs. Entering a URL enables public page-link lookup unless you explicitly switch it off."
+msgstr ""
+
+#: src/Admin/GuidePage.php:53
+msgid "Resolve dynamic links: optionally query the public source WordPress REST API to translate supported Divi page, post and attachment links. If the API is unavailable, provide explicit source item ID to destination URL mappings in Advanced link mappings."
+msgstr ""
+
+#: src/Admin/GuidePage.php:54
+msgid "Source theme defaults: Divi exports can omit Theme Customizer fonts, colors, and row width. Match these defaults to your source site. Explicit module settings take precedence."
+msgstr ""
+
+#: src/Admin/GuidePage.php:55
+msgid "Use recommended settings restores image/menu options and untouched theme suggestions. It preserves your entered source URL, explicit link-lookup choice, edited theme defaults and warning acknowledgement."
+msgstr ""
+
+#: src/Admin/GuidePage.php:58
+msgid "Converted for review / Analyze only: a saved Elementor result is available, but the target has not been changed. Use Apply on that completed job to write it."
+msgstr ""
+
+#: src/Admin/GuidePage.php:59
+msgid "Applied: the result was written to its exact target. Check its frontend and Elementor editor before accepting the migration."
+msgstr ""
+
+#: src/Admin/GuidePage.php:60
+msgid "Warnings: review a possible visual difference, source dependency, menu mismatch, or unresolved asset/link. Informational notes describe conversion decisions and are separate from warnings."
+msgstr ""
+
+#: src/Admin/GuidePage.php:61
+msgid "No errors or warnings confirms the supplied layout was processed, not that it includes the entire source site. Page exports omit global headers/footers, external overlays and Theme Customizer fonts. Review the Export scope note and verify those separately."
+msgstr ""
+
+#: src/Admin/GuidePage.php:62
+msgid "Conversion not applied / Failed: read the error and its recommended action. Unsupported shortcode fallbacks and unconfigured forms block application. A warning acknowledgement cannot bypass these blockers."
+msgstr ""
+
+#: src/Admin/GuidePage.php:63
+msgid "Needs recovery: inspect the current target and original backup in the report. Use Restore interrupted item only after reviewing them. Later edits are protected."
+msgstr ""
+
+#: src/Admin/GuidePage.php:64
+msgid "Clear Migration Jobs archives selected finished jobs. It does not delete converted pages, templates, or rollback backups. View cleared jobs to restore the entries."
+msgstr ""
+
+#: src/Admin/GuidePage.php:68
+msgid "Caption bars shrink or source sections lose their white background in an older result."
+msgstr ""
+
+#: src/Admin/GuidePage.php:68
+msgid "Reconvert with version 1.3.2 or later, then apply the new result. Explicit widths, maximum widths, responsive settings and transparent backgrounds are retained. Keep the conversion styles widget; updating the plugin does not rebuild old saved output."
+msgstr ""
+
+#: src/Admin/GuidePage.php:69
+msgid "The Learning Center or third-party blog grid blocks Apply."
+msgstr ""
+
+#: src/Admin/GuidePage.php:69
+msgid "Reconvert standard DiviGear grids with version 1.2.5 or later; they use the editable Ace Post Grid with destination posts, metadata and pagination. Keep Ace Migrator active. Old failed jobs are not rebuilt by an update. For unsupported masonry, related/custom-type or source category-ID queries, use Module template replacements (optional) and choose a configured native Elementor container. Page JSON does not import blog posts."
+msgstr ""
+
+#: src/Admin/GuidePage.php:70
+msgid "A dynamic page, post or attachment link still blocks Apply after entering a reference URL."
+msgstr ""
+
+#: src/Admin/GuidePage.php:70
+msgid "Check the report source URL and public source-link lookup flag. Enable lookup or provide the named source ID in Advanced link mappings. The report records REST errors and mapping outcomes. Create a fresh conversion after correcting settings: Apply uses the old saved output and cannot repair unresolved content."
+msgstr ""
+
+#: src/Admin/GuidePage.php:71
+msgid "The conversion completed, but my page did not change."
+msgstr ""
+
+#: src/Admin/GuidePage.php:71
+msgid "Check the job mode. Analyze only saves a template and report. Use Apply to Page on the same job, or Apply to UAE Template for a header/footer. Importing a downloaded JSON into Elementor is a separate manual workflow."
+msgstr ""
+
+#: src/Admin/GuidePage.php:72
+msgid "My UAE template is missing from the destination list."
+msgstr ""
+
+#: src/Admin/GuidePage.php:72
+msgid "Use Headers & Footers, activate UAE, and ensure the template has a Header or Footer type. The current user must be able to edit it. Trashed templates and other template types are excluded."
+msgstr ""
+
+#: src/Admin/GuidePage.php:73
+msgid "The menu links or dropdown icons differ."
+msgstr ""
+
+#: src/Admin/GuidePage.php:73
+msgid "Choose the correct destination menu in Appearance > Menus. JSON does not carry the original hierarchy. Enable source menu image lookup for public source images; unsupported or ambiguous decorations need manual editing. Create a fresh conversion after changing the menu."
+msgstr ""
+
+#: src/Admin/GuidePage.php:74
+msgid "Apply says the target or menu changed."
+msgstr ""
+
+#: src/Admin/GuidePage.php:74
+msgid "The saved result was created against an earlier target or menu state. Create a fresh conversion against the current state. This guard protects newer edits and prevents old menu images from attaching to the wrong item."
+msgstr ""
+
+#: src/Admin/GuidePage.php:75
+msgid "My layout, typography, or spacing differs."
+msgstr ""
+
+#: src/Admin/GuidePage.php:75
+msgid "Compare source theme defaults and desktop/tablet/mobile module settings. Review the report. Clear page/CDN caches and regenerate Elementor CSS if old styles remain. Third-party modules and unavailable source fonts may require manual work."
+msgstr ""
+
+#: src/Admin/GuidePage.php:76
+msgid "How are header and custom fonts preserved?"
+msgstr ""
+
+#: src/Admin/GuidePage.php:76
+msgid "Font families and responsive choices are preserved and loaded through Elementor. Keep the conversion styles and Source font widgets in the template. Verify source theme defaults for Divi global font references. Google fonts follow your Elementor loading settings; custom fonts must be registered on the destination under the same family name. Layout JSON does not include custom font files. The report explains missing registrations or disabled loading."
+msgstr ""
+
+#: src/Admin/GuidePage.php:77
+msgid "Can I undo or remove the plugin?"
+msgstr ""
+
+#: src/Admin/GuidePage.php:77
+msgid "Use Rollback in Migration Jobs to restore migration-owned fields when the target has no newer edits. Imported media and new drafts are retained. Deactivation stops scheduled cleanup and retains records; deletion also retains private records so reinstalling can recover reports and backups. Converted portable styles remain in the Elementor output."
+msgstr ""
+
+#: src/Admin/GuidePage.php:82
+msgid "WordPress 6.5+ and PHP 7.4+ are declared minimums; your Elementor version may require newer versions. Elementor must be active. Site administrators need manage_options and unfiltered_html; importing media also requires upload_files. On multisite, unfiltered_html may be restricted to super administrators."
+msgstr ""
+
+#: src/Admin/GuidePage.php:83
+msgid "Supported input is Divi 4 portability JSON. Output uses Classic Elementor Flexbox Containers and native widgets, with scoped portable HTML/CSS where needed. Divi 5 block exports and Atomic output are not supported."
+msgstr ""
+
+#: src/Admin/GuidePage.php:84
+msgid "Common text, image, heading, button, accordion/toggle, blurb, layout, and menu conversion is available. Run Module Coverage on your own export for a specific module list. Shared globals, cross-site gallery IDs, arbitrary dynamic bindings, third-party modules, and provider integrations can require manual work."
+msgstr ""
+
+#: src/Admin/GuidePage.php:85
+msgid "Elementor Pro integrations have not completed release acceptance. Do not assume a converted form sends mail or connects to a provider; configure and test it separately before publishing."
+msgstr ""
+
+#: src/Admin/GuidePage.php:86
+msgid "Production concurrency uses MySQL 5.7.5+ or MariaDB 10+ session advisory locks. SQLite is used for single-host QA. Each JSON file is limited to 20 MB, with up to 24 files per upload; your hosting upload limits can be lower."
+msgstr ""
+
+#: src/Admin/GuidePage.php:89
+msgid "Exports, jobs, and rollback backups are stored privately in non-autoloaded database options and associated with the importing administrator. Reports and JSON templates can contain page content, URLs, and metadata: share them only with trusted recipients."
+msgstr ""
+
+#: src/Admin/GuidePage.php:90
+msgid "There is no telemetry or vendor migration service. Optional requests go to source sites or asset hosts when you enable image import, public REST link resolution, or source menu image lookup. Those hosts receive your server IP and the requested URL. Converted source font references may contact font hosts when visitors view the destination page."
+msgstr ""
+
+#: src/Admin/GuidePage.php:91
+msgid "Settings controls storage and daily bounded cleanup. Default retention is 30 days for unreferenced sources and 90 days for eligible jobs. Every backup protects its job and source indefinitely; active, interrupted, and created target records are protected. WP-Cron must run for cleanup."
+msgstr ""
+
+#: src/Admin/GuidePage.php:92
+msgid "For support, record the plugin, WordPress, PHP, Elementor, and UAE versions, the job mode, the error, and reproducible steps. Use a sanitized example export and redact personal content from reports."
+msgstr ""
+
+#: src/Admin/ImportPage.php:25
+msgid "Header & Footer Migrator"
+msgstr ""
+
+#: src/Admin/ImportPage.php:25
+msgid "Import & Scan Divi Exports"
+msgstr ""
+
+#: src/Admin/ImportPage.php:25
+msgid "Start with a Divi 4 portability JSON export. Upload and scan before choosing a destination."
+msgstr ""
+
+#: src/Admin/ImportPage.php:26
+msgid "Prepare your export"
+msgstr ""
+
+#: src/Admin/ImportPage.php:26
+msgid "In Divi Theme Builder, export each Header or Footer layout separately using Portability. Activate UAE on this destination site to apply the result to a Header or Footer template."
+msgstr ""
+
+#: src/Admin/ImportPage.php:26
+msgid "Open your source page or blog post in Divi Builder, choose Portability > Export, and save the layout as JSON. Upload several files to migrate a batch. On the mapping screen, choose Pages or Blog Posts explicitly. Import existing post records through WordPress first when moving sites; a layout JSON does not contain the post database."
+msgstr ""
+
+#: src/Admin/ImportPage.php:26
+msgid "See the migration instructions"
+msgstr ""
+
+#: src/Admin/ImportPage.php:27
+msgid "Convert a page already on this site"
+msgstr ""
+
+#: src/Admin/ImportPage.php:27
+msgid "Choose its source and destination without exporting JSON."
+msgstr ""
+
+#: src/Admin/ImportPage.php:30
+msgid "Upload Divi layouts"
+msgstr ""
+
+#: src/Admin/ImportPage.php:31
+msgid "Choose JSON exports"
+msgstr ""
+
+#: src/Admin/ImportPage.php:31
+msgid "Up to 24 files, 20 MB per file. Hosting limits may be lower. Files are validated and stored privately in the database. Scanning does not change pages or import media."
+msgstr ""
+
+#: src/Admin/ImportPage.php:31
+msgid "Upload and Scan"
+msgstr ""
+
+#: src/Admin/JobsPage.php:50
+#: src/Admin/Menu.php:33
+#: src/Admin/View.php:14
+msgid "Migration Jobs"
+msgstr ""
+
+#: src/Admin/JobsPage.php:50
+msgid "Review saved results, apply them to their original destinations, and manage your migration history."
+msgstr ""
+
+#: src/Admin/JobsPage.php:51
+msgid "Enable JavaScript to process jobs, apply results, or use job actions. The User Guide and reports remain available without JavaScript."
+msgstr ""
+
+#: src/Admin/MappingPage.php:10
+msgid "Header / Footer Template Mapping"
+msgstr ""
+
+#: src/Admin/MappingPage.php:10
+msgid "Map pages & posts"
+msgstr ""
+
+#: src/Admin/MappingPage.php:10
+msgid "Choose a destination for each selected layout, check the settings, then convert for review."
+msgstr ""
+
+#: src/Admin/MappingPage.php:12
+msgid "Choose your pages again"
+msgstr ""
+
+#: src/Admin/MappingPage.php:12
+msgid "Local page selections last one hour and can create only one migration job."
+msgstr ""
+
+#: src/Admin/MappingPage.php:12
+#: src/Admin/ReversePage.php:45
+msgid "Select pages"
+msgstr ""
+
+#: src/Admin/MappingPage.php:13
+msgid "No layouts to map yet"
+msgstr ""
+
+#: src/Admin/MappingPage.php:13
+msgid "Upload Divi JSON exports first. Your mapping session lasts one hour; upload again if it has expired."
+msgstr ""
+
+#: src/Admin/MappingPage.php:29
+msgid "Source: a saved copy of a Divi page on this site. Existing local menu/category IDs are suggested for review. Your chosen target is selected below. Source content, presets and referenced globals must still match when applying."
+msgstr ""
+
+#: src/Admin/MappingPage.php:30
+msgid "1. Select layouts & destinations"
+msgstr ""
+
+#: src/Admin/MappingPage.php:30
+msgid "Each selected layout needs a distinct destination. New targets are created as drafts when you apply."
+msgstr ""
+
+#: src/Admin/MappingPage.php:53
+msgid "Older post ID (only for that option)"
+msgstr ""
+
+#: src/Admin/MappingPage.php:62
+msgid "Blog category mappings"
+msgstr ""
+
+#: src/Admin/MappingPage.php:62
+msgid "Select the destination category for each source ID. Category IDs differ between sites. Local page conversions suggest verified categories from this site for review. Import/create the destination categories first. Missing mappings preserve the module and block Apply."
+msgstr ""
+
+#: src/Admin/MappingPage.php:64
+msgid "Choose destination category"
+msgstr ""
+
+#: src/Admin/MappingPage.php:88
+msgid "Module template replacements (optional)"
+msgstr ""
+
+#: src/Admin/MappingPage.php:88
+msgid "Supported core Divi Blog and DiviGear blog listings convert automatically to the editable Ace Post Grid widget; keep Ace Migrator active to render it. For unsupported layouts/queries or a different widget provider, save a configured Elementor container template and select it here. This explicitly replaces the whole module design and query. Blog posts are not imported."
+msgstr ""
+
+#: src/Admin/MappingPage.php:91
+msgid "Convert automatically with Ace Post Grid"
+msgstr ""
+
+#: src/Admin/MappingPage.php:91
+msgid "Keep unresolved — blocks Apply"
+msgstr ""
+
+#: src/Admin/MappingPage.php:93
+msgid "Or enter template ID"
+msgstr ""
+
+#: src/Admin/MappingPage.php:96
+msgid "The 100 newest saved templates are listed. An entered template ID takes priority and can select an older template; permissions and native elements are still validated. All instances of the selected module type in this source file use that replacement. Later template edits do not change saved output; run a fresh conversion to include them."
+msgstr ""
+
+#: src/Admin/MappingPage.php:96
+msgid "Manage saved Elementor templates"
+msgstr ""
+
+#: src/Admin/MappingPage.php:98
+msgid "2. Check import settings"
+msgstr ""
+
+#: src/Admin/MappingPage.php:102
+msgid "Advanced link mappings"
+msgstr ""
+
+#: src/Admin/MappingPage.php:102
+msgid "Use this when the public source REST API cannot resolve a supported Divi page, post or attachment link. Enter a JSON object mapping source page, post or attachment IDs to destination URLs."
+msgstr ""
+
+#: src/Admin/MappingPage.php:102
+msgid "Source item ID to target URL"
+msgstr ""
+
+#: src/Admin/MappingPage.php:103
+msgid "Resolve supported dynamic links from published pages, posts and attachments on this site"
+msgstr ""
+
+#: src/Admin/MappingPage.php:103
+msgid "Resolve dynamic page, post and attachment links through the public WordPress REST API of the specified source origin"
+msgstr ""
+
+#: src/Admin/MappingPage.php:105
+msgid "The source is this WordPress site. Supported dynamic links resolve against local published pages, posts and attachments without a public REST request. Advanced link mappings take priority."
+msgstr ""
+
+#: src/Admin/MappingPage.php:105
+msgid "Enter the original Divi site URL. Entering a URL enables public page-link lookup; you can switch it off explicitly. This lookup reads published source page URLs only. Advanced link mappings take priority."
+msgstr ""
+
+#: src/Admin/MappingPage.php:107
+msgid "Source theme defaults"
+msgstr ""
+
+#: src/Admin/MappingPage.php:107
+msgid "Divi layout exports can omit Theme Customizer settings. Verify these defaults against your source site. Explicit module values take precedence. Recognized source sites use measured defaults; other sites use generic Divi defaults."
+msgstr ""
+
+#. translators: %s: Source website origin inferred from exported media URLs.
+#: src/Admin/MappingPage.php:110
+#, php-format
+msgid "Style defaults are suggested from media in %s. Some selected exports lack source provenance; verify that these defaults suit every selected layout and enter the source origin for link resolution."
+msgstr ""
+
+#: src/Admin/MappingPage.php:116
+msgid "3. Convert for review or apply now"
+msgstr ""
+
+#: src/Admin/MappingPage.php:117
+msgid "For Apply: I reviewed the analysis and accept its documented differences on published targets."
+msgstr ""
+
+#: src/Admin/MappingPage.php:117
+msgid "Review acknowledgement is required only when applying to a published target with warnings. It is not needed to convert for review."
+msgstr ""
+
+#: src/Admin/MappingPage.php:118
+#: src/Admin/ReversePage.php:34
+msgid "Convert for review"
+msgstr ""
+
+#: src/Admin/MappingPage.php:118
+msgid "Convert Selected / download templates"
+msgstr ""
+
+#: src/Admin/MappingPage.php:118
+msgid "Recommended first run: Convert Selected, review the report in Migration Jobs, then apply the saved result. Apply now converts and writes immediately after validation and backups."
+msgstr ""
+
+#: src/Admin/Menu.php:17
+msgid "Get started"
+msgstr ""
+
+#: src/Admin/Menu.php:18
+msgid "User guide"
+msgstr ""
+
+#: src/Admin/Menu.php:27
+msgid "Ace Migrator"
+msgstr ""
+
+#: src/Admin/Menu.php:28
+#: src/Admin/View.php:9
+msgid "Overview"
+msgstr ""
+
+#: src/Admin/Menu.php:29
+#: src/Admin/View.php:10
+msgid "Pages & Posts"
+msgstr ""
+
+#: src/Admin/Menu.php:30
+#: src/Admin/View.php:11
+msgid "Convert Site Page"
+msgstr ""
+
+#: src/Admin/Menu.php:32
+#: src/Admin/View.php:13
+msgid "Headers & Footers"
+msgstr ""
+
+#: src/Admin/Menu.php:35
+#: src/Admin/SettingsPage.php:14
+#: src/Admin/View.php:16
+msgid "Settings"
+msgstr ""
+
+#: src/Admin/Menu.php:37
+msgid "Module Coverage"
+msgstr ""
+
+#: src/Admin/Menu.php:38
+msgid "Map & Convert"
+msgstr ""
+
+#: src/Admin/Menu.php:39
+msgid "Template Mapping"
+msgstr ""
+
+#: src/Admin/Menu.php:40
+#: src/Admin/ReportPage.php:9
+msgid "Migration Report"
+msgstr ""
+
+#: src/Admin/ReportPage.php:9
+msgid "Read the outcome and recommended actions before applying or publishing your result."
+msgstr ""
+
+#: src/Admin/ReportPage.php:10
+msgid "Choose a migration report"
+msgstr ""
+
+#: src/Admin/ReportPage.php:10
+msgid "Open Migration Jobs and select Report beside the job you want to review."
+msgstr ""
+
+#: src/Admin/ReportPage.php:15
+msgid "Direction"
+msgstr ""
+
+#: src/Admin/ReportPage.php:16
+msgid "Source site URL"
+msgstr ""
+
+#: src/Admin/ReportPage.php:16
+msgid "Public page-link lookup"
+msgstr ""
+
+#: src/Admin/ReportPage.php:16
+msgid "Enabled"
+msgstr ""
+
+#: src/Admin/ReportPage.php:16
+msgid "Disabled"
+msgstr ""
+
+#: src/Admin/ReportPage.php:31
+msgid "Download Divi shortcodes"
+msgstr ""
+
+#: src/Admin/ReportPage.php:39
+msgid "Element and setting coverage"
+msgstr ""
+
+#: src/Admin/ReportPage.php:40
+msgid "Technical JSON report & converted data"
+msgstr ""
+
+#: src/Admin/ReportPage.php:40
+msgid "This includes layout content and URLs. Redact private information before sharing a report."
+msgstr ""
+
+#: src/Admin/ReportPage.php:40
+msgid "JSON report"
+msgstr ""
+
+#: src/Admin/ReversePage.php:7
+#: src/Admin/SitePagePage.php:7
+msgid "Unauthorized."
+msgstr ""
+
+#: src/Admin/ReversePage.php:26
+msgid "Choose an Elementor page and a Divi destination. Convert for review, then apply the saved result after checking its coverage report. No JSON upload is needed."
+msgstr ""
+
+#: src/Admin/ReversePage.php:30
+msgid "Review conversion report"
+msgstr ""
+
+#: src/Admin/ReversePage.php:30
+msgid "Apply saved result in Migration Jobs"
+msgstr ""
+
+#: src/Admin/ReversePage.php:33
+msgid "Review your page assignment"
+msgstr ""
+
+#: src/Admin/ReversePage.php:33
+msgid "New Divi page draft"
+msgstr ""
+
+#: src/Admin/ReversePage.php:33
+msgid "Conversion saves a report and Divi output. It does not modify either page. Unsupported widgets, settings and behaviors block Apply and are listed with their element paths. The selection expires after one hour."
+msgstr ""
+
+#: src/Admin/ReversePage.php:37
+#: src/Admin/SitePagePage.php:28
+msgid "Source and destination"
+msgstr ""
+
+#: src/Admin/ReversePage.php:40
+msgid "Source Elementor page"
+msgstr ""
+
+#: src/Admin/ReversePage.php:40
+msgid "Target Divi page"
+msgstr ""
+
+#: src/Admin/ReversePage.php:40
+#: src/Admin/SitePagePage.php:32
+msgid "Choose a page"
+msgstr ""
+
+#: src/Admin/ReversePage.php:41
+msgid "Create a new Divi page draft"
+msgstr ""
+
+#: src/Admin/ReversePage.php:43
+#: src/Admin/SitePagePage.php:35
+msgid "Choose another page by ID"
+msgstr ""
+
+#: src/Admin/ReversePage.php:43
+msgid "Page ID (for another page by ID)"
+msgstr ""
+
+#: src/Admin/ReversePage.php:45
+msgid "The 100 newest editable pages are listed. Use an ID for an older page. Choose the source itself only for an in-place migration. New destinations remain drafts; existing title, URL, status and SEO are preserved."
+msgstr ""
+
+#: src/Admin/ReversePage.php:46
+msgid "Before you apply"
+msgstr ""
+
+#: src/Admin/ReversePage.php:46
+msgid "Apply requires an active Divi 4 theme or Divi 4 Builder plugin. Classic Elementor layouts are supported within the coverage below. Atomic elements, nested specialty layouts, Pro form delivery, loop templates and unsupported dynamic behavior remain protected. Theme Builder assignments and sitewide styles need separate review."
+msgstr ""
+
+#: src/Admin/ReversePage.php:46
+msgid "Widget conversion coverage"
+msgstr ""
+
+#: src/Admin/ReversePage.php:46
+msgid "Elementor widget"
+msgstr ""
+
+#: src/Admin/ReversePage.php:46
+msgid "Divi mapping or required review"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:14
+msgid "Control processing and private storage. Conversion settings are chosen separately for each migration."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:15
+msgid "Settings saved."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:17
+msgid "Processing"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:18
+msgid "Layouts per request"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:18
+msgid "Recommended: 1. Increase only when your hosting can handle larger batches. Allowed range: 1–5."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:19
+msgid "Private storage & retention"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:20
+msgid "Source storage limit (MB)"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:20
+msgid "Maximum space for private JSON exports. Recommended: 256 MB. Allowed range: 20–1024."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:21
+msgid "Unreferenced sources (days)"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:21
+msgid "Default: 30. Set 0 to disable cleanup; enabled retention has a minimum of 2 days."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:22
+msgid "Eligible jobs (days)"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:22
+msgid "Default: 90. Set 0 to disable cleanup; enabled retention has a minimum of 30 days."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:23
+msgid "Daily cleanup examines up to 100 records. Active jobs, interrupted items, created targets, and every backup are protected. A backup also protects its job and source indefinitely. WP-Cron must run for cleanup. Deactivation and deletion retain records."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:24
+msgid "Save settings"
+msgstr ""
+
+#: src/Admin/SitePagePage.php:19
+msgid "Convert a Site Page"
+msgstr ""
+
+#: src/Admin/SitePagePage.php:19
+msgid "Choose a Divi 4 page on this WordPress site and the page that should receive its Elementor layout. No export or upload is needed."
+msgstr ""
+
+#: src/Admin/SitePagePage.php:24
+msgid "Your pages are selected"
+msgstr ""
+
+#: src/Admin/SitePagePage.php:24
+msgid "New Elementor page draft"
+msgstr ""
+
+#: src/Admin/SitePagePage.php:24
+msgid "A private source copy is ready for review. Neither page has been changed. Check source theme defaults and suggested local menu/category mappings, then analyze or apply. Changes to the source after selection require a fresh selection."
+msgstr ""
+
+#: src/Admin/SitePagePage.php:24
+msgid "Review settings and convert"
+msgstr ""
+
+#: src/Admin/SitePagePage.php:32
+msgid "Source Divi page"
+msgstr ""
+
+#: src/Admin/SitePagePage.php:32
+msgid "Target Elementor page"
+msgstr ""
+
+#: src/Admin/SitePagePage.php:33
+msgid "Create a new page draft"
+msgstr ""
+
+#: src/Admin/SitePagePage.php:35
+msgid "Supported Divi pages among the 100 newest pages are listed. Use a page ID for an older source. Divi 5 and active Elementor sources are excluded."
+msgstr ""
+
+#: src/Admin/SitePagePage.php:35
+msgid "Only the selected destination receives the converted layout. Choose the source itself for an in-place migration, or another page to keep its Divi rendering."
+msgstr ""
+
+#: src/Admin/SitePagePage.php:35
+msgid "Page ID (only for “another page by ID”)"
+msgstr ""
+
+#: src/Admin/SitePagePage.php:37
+msgid "Analysis changes neither page. Apply replaces the target’s builder layout with a backup; its title, URL, publication state and SEO are preserved. A new destination stays a draft."
+msgstr ""
+
+#: src/Admin/SitePagePage.php:38
+msgid "Select pages and review settings"
+msgstr ""
+
+#: src/Admin/SitePagePage.php:39
+msgid "No supported Divi sources were found among the newest pages. Enter an older source page ID, or import a portability export through Pages & Posts."
+msgstr ""
+
+#: src/Admin/SitePagePage.php:40
+msgid "This converts page content. Theme Builder headers/footers, global display conditions and sitewide custom CSS need their separate workflows. Review inherited fonts and theme defaults before Apply."
+msgstr ""
+
+#: src/Admin/SitePagePage.php:42
+msgid "Choose pages"
+msgstr ""
+
+#: src/Admin/SitePagePage.php:42
+msgid "Settings & convert"
+msgstr ""
+
+#: src/Admin/SitePagePage.php:42
+#: src/Admin/View.php:26
+msgid "Review results"
+msgstr ""
+
+#: src/Admin/SitePagePage.php:42
+#: src/Admin/View.php:26
+msgid "Apply & verify"
+msgstr ""
+
+#: src/Admin/View.php:18
+msgid "Divi and Elementor migration"
+msgstr ""
+
+#: src/Admin/View.php:19
+msgid "Migrator navigation"
+msgstr ""
+
+#: src/Admin/View.php:25
+msgid "Migration progress"
+msgstr ""
+
+#: src/Admin/View.php:26
+msgid "Upload"
+msgstr ""
+
+#: src/Admin/View.php:26
+msgid "Map & convert"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:7
+msgid "Ace Post Grid"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:16
+msgid "Destination posts"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:17
+msgid "Displays published posts from this WordPress site. Divi layout JSON contains no blog posts. Keep Ace Migrator active to render this widget."
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:18
+msgid "Posts per page"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:19
+msgid "Skip first posts"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:20
+msgid "Order"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:20
+msgid "Newest first"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:20
+msgid "Most comments first"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:20
+msgid "Random (pagination must be off)"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:21
+msgid "Destination category slugs"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:21
+msgid "Comma-separated slugs. Blank displays all categories. Source category IDs are never reused."
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:22
+msgid "Mapped destination category IDs"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:22
+msgid "Filled by the explicit Blog category mapping. Clear this before using category slugs instead. Missing categories stop the query."
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:23
+msgid "Title HTML tag"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:24
+msgid "Separate metadata with bars"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:25
+msgid "Featured image"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:25
+#: src/Elementor/Posts/GridWidget.php:48
+msgid "Excerpt"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:25
+msgid "Use manual excerpt"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:25
+#: src/Elementor/Posts/GridWidget.php:48
+msgid "Author"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:25
+#: src/Elementor/Posts/GridWidget.php:48
+msgid "Date"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:25
+#: src/Elementor/Posts/GridWidget.php:48
+msgid "Categories"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:25
+msgid "Comment count"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:25
+msgid "Read more button"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:25
+msgid "Older / newer pagination"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:25
+msgid "Metadata icons"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:25
+msgid "Equal card heights"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:25
+msgid "Full-width button"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:25
+msgid "Button at bottom"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:25
+msgid "Image overlay on hover"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:28
+msgid "Automatic excerpt characters"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:29
+msgid "Date format"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:30
+msgid "Read more text"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:30
+msgid "Read More"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:32
+msgid "Grid and card"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:33
+msgid "Layout"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:33
+msgid "Grid"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:33
+msgid "Masonry"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:33
+msgid "Fullwidth list"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:34
+msgid "Columns"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:35
+msgid "Space between cards"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:36
+msgid "Card background"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:37
+msgid "Featured image ratio"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:37
+msgid "Divi standard crop (8:5)"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:37
+msgid "Original image ratio"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:37
+msgid "Square"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:37
+msgid "Widescreen"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:38
+msgid "Featured image fit"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:38
+msgid "Cover"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:38
+msgid "Contain"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:41
+msgid "Card corners"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:41
+msgid "Image corners"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:43
+msgid "Image overlay color"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:44
+msgid "Button alignment"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:44
+#: src/Elementor/Posts/GridWidget.php:61
+msgid "Left"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:44
+#: src/Elementor/Posts/GridWidget.php:61
+msgid "Center"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:44
+#: src/Elementor/Posts/GridWidget.php:61
+msgid "Right"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:48
+msgid "Title"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:48
+msgid "Metadata"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:48
+msgid "Read more"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:48
+msgid "Pagination"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:58
+msgid "Default"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:58
+msgid "None"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:58
+msgid "Underline"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:58
+msgid "Strike through"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:58
+msgid "Underline and strike through"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:60
+msgid "Text color"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:61
+msgid "Alignment"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:61
+msgid "Justify"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:62
+msgid "Background"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:65
+msgid "Spacing and hover"
+msgstr ""
+
+#. translators: 1: Grid element name 2: Spacing property
+#: src/Elementor/Posts/GridWidget.php:69
+#, php-format
+msgid "%1$s %2$s"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:72
+msgid "Read more hover color"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:90
+msgid "No published posts match this grid. Check destination posts, categories and offset."
+msgstr ""
+
+#. translators: 1: Read more button text 2: Post title
+#: src/Elementor/Posts/GridWidget.php:107
+#, php-format
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:114
+msgid "Blog pagination"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:121
+msgid "« Older Entries"
+msgstr ""
+
+#: src/Elementor/Posts/GridWidget.php:122
+msgid "Newer Entries »"
+msgstr ""
+
+#. translators: %s: Number of comments
+#: src/Elementor/Posts/GridWidget.php:137
+#, php-format
+msgid "%s comment"
+msgid_plural "%s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: Plugin name 2: Elementor
+#: src/Plugin.php:51
+#, php-format
+msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
+msgstr ""
+
+#: src/Plugin.php:53
+msgid "Elementor"
+msgstr ""

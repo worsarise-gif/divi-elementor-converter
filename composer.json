@@ -1,0 +1,27 @@
+{
+  "name": "suiteedge/divi-elementor-migrator",
+  "description": "Converts supported Divi 4 JSON layouts to Elementor pages and UAE templates with reports, bulk apply and protected rollback.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Ace"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "SuiteEdge\\Migrator\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SuiteEdge\\Migrator\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "@php tests/run.php"
+  }
+}

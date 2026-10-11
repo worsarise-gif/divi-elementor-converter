@@ -1,0 +1,9 @@
+/* Reserved conversion scope classes: repair existing imports without changing page data.
+   Native Elementor typography controls have higher specificity and remain editable. */
+.elementor-element[class*="suiteedge-"] a.elementor-button {
+    text-decoration: none;
+}
+.elementor-element[class*="suiteedge-"] .elementor-icon-box-title a,
+.elementor-element[class*="suiteedge-"] .elementor-image-box-title a {
+    text-decoration: inherit;
+}

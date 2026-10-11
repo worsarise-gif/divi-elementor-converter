@@ -1,0 +1,62 @@
+<?php
+/** Disposable-site integration only. Uses the explicitly supplied private Learning Center export. */
+if(!defined('ABSPATH') || !getenv('SUITEEDGE_QA_EVIDENCE')){exit(1);}wp_set_current_user(get_user_by('login','qa_admin')->ID);set_current_screen('suiteedge-migrator-mapping');
+$checks=0;$check=function($ok,$label)use(&$checks){if(!$ok){throw new RuntimeException('FAIL: '.$label);}$checks++;};
+$walk=function($nodes)use(&$walk){$all=[];foreach($nodes as$n){$all[]=$n;$all=array_merge($all,$walk($n['elements']));}return $all;};
+$json=file_get_contents('C:/Users/ay/Downloads/Learning Center.json');$export=(new SuiteEdge\Migrator\Import\DiviExportReader())->read_json($json);
+$builder=new SuiteEdge\Migrator\Elementor\DocumentBuilder();$data=(new SuiteEdge\Migrator\Elementor\Classic\Serializer())->serialize($builder->build($export['post_content'],['presets'=>$export['presets'],'source_origin'=>'https://suiteedge.com']));
+$check((new SuiteEdge\Migrator\Elementor\Validator())->validate($data,true),'original export validates real Elementor controls');
+$nodes=$walk($data);$grids=array_values(array_filter($nodes,function($n){return($n['widgetType']??'')==='ace-post-grid';}));$check(count($grids)===1,'exactly one native grid converted');$grid=$grids[0];$s=$grid['settings'];
+$check(!array_filter($nodes,function($n){return($n['widgetType']??'')==='shortcode';}),'original Learning Center has no unresolved shortcode');
+$check($s['image_border_width']['left']==='7'&&$s['title_margin']['left']==='16'&&$s['card_radius']['top']==='24','export surface styles map into native controls');
+$check($s['meta_font_weight']==='500'&&$s['title_font_family']==='Montserrat','omitted font weight inherits source profile');
+$check($s['show_excerpt']===''&&$s['show_author']===''&&$s['meta_icons']==='yes','export metadata and excerpt switches preserved');
+$check(count($builder->warnings)===1&&strpos($builder->warnings[0],'requires Ace Migrator')!==false,'only runtime dependency warning on source grid');
+$widget=Elementor\Plugin::$instance->widgets_manager->get_widget_types('ace-post-grid');
+$check($widget && $widget->get_style_depends()===['ace-migrator-post-grid'],'provider widget and stylesheet registered');
+$controls=$widget->get_controls();foreach(['columns','grid_gap','title_font_family','read_more_font_family','button_padding','category_slugs','show_pagination']as$key){$check(isset($controls[$key]),'editing control available: '.$key);}
+$check(!empty($controls['button_padding']['is_responsive'])||isset($controls['button_padding']['responsive']),'button padding has native responsive controls');
+$variant=(new SuiteEdge\Migrator\Elementor\Classic\Serializer())->serialize($builder->build('[dgbm_blog_module title_font="Montserrat|550|||||||" title_font_phone="Inter|450|on||on|on|||" title_font_size_phone="19px" title_text_color_phone="#123456" border_width_all_image_phone="0px" border_color_all_image_phone="#654321" button_padding_phone="2px|3px|4px|5px|false|false" /]'));
+$check((new SuiteEdge\Migrator\Elementor\Validator())->validate($variant,true),'responsive font family/weight/decoration and borders validate native controls');
+$variants=array_values(array_filter($walk($variant),function($n){return($n['widgetType']??'')==='ace-post-grid';}));$check($variants[0]['settings']['title_font_family_mobile']==='Inter'&&$variants[0]['settings']['title_font_weight_mobile']==='450','variable font weights and mobile family stay editable');
+$styles=implode('',array_map(function($n){return($n['widgetType']??'')==='html'?($n['settings']['html']??''):'';},$walk($variant)));$check(strpos($styles,'font-family:"Inter"')!==false&&strpos($styles,'font-weight:450')!==false&&strpos($styles,'text-decoration:underline line-through')!==false,'responsive font styles compiled at source breakpoints');
+// A deterministic destination category avoids interfering with unrelated QA posts.
+$term=wp_insert_term('QA Ace grid '.wp_generate_uuid4(),'category',['slug'=>'qa-ace-grid-'.strtolower(wp_generate_password(6,false,false))]);if(is_wp_error($term)){throw new RuntimeException($term->get_error_message());}$category=get_term($term['term_id']);$ids=[];
+$uploads=wp_upload_dir();$image_file=$uploads['path'].'/'.wp_unique_filename($uploads['path'],'qa-grid.png');wp_mkdir_p($uploads['path']);copy(SUITEEDGE_MIGRATOR_PLUGIN_DIR.'assets/icons/logo.png',$image_file);
+$attachment=wp_insert_attachment(['post_title'=>'QA grid image','post_mime_type'=>'image/png','guid'=>$uploads['url'].'/'.basename($image_file)],$image_file);require_once ABSPATH.'wp-admin/includes/image.php';wp_update_attachment_metadata($attachment,wp_generate_attachment_metadata($attachment,$image_file));
+for($i=1;$i<=15;$i++){
+    $id=wp_insert_post(['post_type'=>'post','post_status'=>'publish','post_title'=>'QA Ace Article '.$i,'post_content'=>'Automatic article '.$i.' body content','post_excerpt'=>'Manual excerpt '.$i,'post_date'=>gmdate('Y-m-d H:i:s',time()-$i*3600),'post_category'=>[$category->term_id]]);$ids[]=$id;set_post_thumbnail($id,$attachment);
+}
+$private=wp_insert_post(['post_type'=>'post','post_status'=>'private','post_title'=>'Private excluded grid post','post_category'=>[$category->term_id]]);$draft=wp_insert_post(['post_type'=>'post','post_status'=>'draft','post_title'=>'Draft excluded grid post','post_category'=>[$category->term_id]]);
+$query=new SuiteEdge\Migrator\Elementor\Posts\GridQuery();$q=new WP_Query($query->args(['posts_per_page'=>4,'post_offset'=>2,'category_slugs'=>$category->slug,'show_pagination'=>'yes'],2));
+$check(wp_list_pluck($q->posts,'ID')===array_slice($ids,6,4),'second page honors offset and deterministic published-only ordering');
+$check($query->pages($q->found_posts,['posts_per_page'=>4,'post_offset'=>2])===4,'found count produces correct offset-aware page total');
+// Native rendering uses get_posts objects, not the global loop; caller state stays intact.
+$global_before=$GLOBALS['post']??null;$grid['settings']['category_slugs']=$category->slug;$grid['settings']['posts_per_page']=4;$grid['settings']['post_offset']=2;
+$instance=Elementor\Plugin::$instance->elements_manager->create_element_instance($grid);ob_start();$instance->print_element();$html=ob_get_clean();
+$check(($GLOBALS['post']??null)===$global_before,'grid leaves caller global post unchanged');
+$dom=new DOMDocument();libxml_use_internal_errors(true);$dom->loadHTML($html);$xpath=new DOMXPath($dom);libxml_clear_errors();$cards=$xpath->query('//article[@data-post-id]');$render_ids=[];foreach($cards as$n){$render_ids[]=(int)$n->getAttribute('data-post-id');}
+$check($render_ids===array_slice($ids,2,4),'first page contains exactly assigned category query');
+$check(strpos($html,'ace-post-author')===false&&strpos($html,'Manual excerpt')===false,'hidden author and excerpt remain absent');
+$check($xpath->query('//svg[contains(@class,"ace-meta-icon")]')->length===8,'metadata renders without requiring Divi icon font');
+$key='ace_grid_'.$grid['id'];$_GET[$key]='2';ob_start();$instance->print_element();$second=ob_get_clean();unset($_GET[$key]);
+$check(strpos($second,'data-post-id="'.$ids[6].'"')!==false&&strpos($second,'data-post-id="'.$ids[2].'"')===false,'pagination performs distinct second-page query');
+$check(strpos($second,'ace-post-newer')!==false&&strpos($second,'ace-post-older')!==false,'both navigation directions on middle page');
+foreach(['-1','999999999',[], '2<script>']as$input){$_GET[$key]=$input;ob_start();$instance->print_element();$out=ob_get_clean();$check(strpos($out,'data-post-id="'.$ids[2].'"')!==false,'malformed public pagination safely uses first page');}unset($_GET[$key]);
+$empty=$grid;$empty['id']='fefefef';$empty['settings']['category_slugs']='category-that-does-not-exist';$instance=Elementor\Plugin::$instance->elements_manager->create_element_instance($empty);ob_start();$instance->print_element();$out=ob_get_clean();$check(strpos($out,'No published posts match')!==false&&strpos($out,'ace-post-older')===false,'empty query is explained with no phantom pagination');
+$repo=new SuiteEdge\Migrator\Jobs\JobRepository();$runner=new SuiteEdge\Migrator\Jobs\BatchRunner($repo);$backup=new SuiteEdge\Migrator\Import\BackupEngine();$source=(new SuiteEdge\Migrator\Import\SourceRepository())->save($json,'Learning Center.json');$target=wp_insert_post(['post_type'=>'page','post_status'=>'draft','post_title'=>'QA automatic Learning Center','post_content'=>'Protected original']);$before=$backup->fingerprint($target);
+$job=new SuiteEdge\Migrator\Jobs\Job();$job->settings=['output_engine'=>'classic','dry_run'=>true,'assets'=>['reuse_library'],'source_origin'=>'https://suiteedge.com'];$job->items=[['source_id'=>$source,'layout_index'=>0,'name'=>'Learning Center.json','target_page_id'=>$target,'status'=>'pending']];$job->summary['total']=1;$repo->save($job);$runner->process_batch($job->id);$saved=$repo->get($job->id);
+$check($saved->status==='completed'&&$saved->items[0]['status']==='analyzed','original export analyzes without replacement');
+$check($backup->fingerprint($target)===$before,'analysis leaves target untouched');
+$hash=$saved->items[0]['output_hash'];(new SuiteEdge\Migrator\Jobs\SavedOutputApplier())->queue([$job->id=>[0]],true);$runner->process_batch($job->id);$applied=$repo->get($job->id);
+$check($applied->items[0]['status']==='converted'&&$applied->items[0]['output_hash']===$hash,'saved output applies to selected page without another conversion');
+$check(get_post_meta($target,'_elementor_edit_mode',true)==='builder','assigned page is editable Elementor');
+$diagnostics=(new SuiteEdge\Migrator\Reports\WarningReport())->diagnostics($applied);$check(in_array('post_grid_runtime_required',array_column($diagnostics['entries'],'code'),true),'report explains runtime dependency');
+$check($runner->rollback($job->id)['status']==='rolled_back'&&$backup->fingerprint($target)===$before,'rollback restores assigned page exactly');
+$badsource=(new SuiteEdge\Migrator\Import\SourceRepository())->save(wp_json_encode(['data'=>'[et_pb_section][dgbm_blog_module include_categories="32" /][/et_pb_section]']),'unsupported-category.json');$bad=new SuiteEdge\Migrator\Jobs\Job();$bad->settings=['output_engine'=>'classic','dry_run'=>false];$bad->items=[['source_id'=>$badsource,'layout_index'=>0,'name'=>'unsupported-category.json','target_page_id'=>$target,'status'=>'pending']];$bad->summary['total']=1;$repo->save($bad);$runner->process_batch($bad->id);$bad=$repo->get($bad->id);$check($bad->items[0]['status']==='failed'&&$backup->fingerprint($target)===$before,'unsupported query cannot overwrite assigned target');
+// Inserted/imported IDs differ, while query/style settings are native controls.
+$library=Elementor\Plugin::$instance->templates_manager->get_source('local');$template=$library->save_item(['title'=>'QA automatic grid export','type'=>'page','content'=>$data,'page_settings'=>[]]);if(is_wp_error($template)){throw new RuntimeException($template->get_error_message());}$inserted=$library->get_data(['template_id'=>$template]);$check($inserted['content'][0]['id']!==$data[0]['id'],'Elementor insertion regenerates IDs normally');$check((new SuiteEdge\Migrator\Elementor\Validator())->validate($inserted['content'],true),'inserted grid validates real controls');
+$preview=wp_insert_post(['post_type'=>'page','post_status'=>'publish','post_title'=>'QA Learning Center grid browser']);update_post_meta($preview,'_wp_page_template','elementor_canvas');update_post_meta($preview,'_elementor_edit_mode','builder');
+$browser_data=$data;$set_query=function(&$nodes)use(&$set_query,$category){foreach($nodes as &$n){if(($n['widgetType']??'')==='ace-post-grid'){$n['settings']['category_slugs']=$category->slug;}$set_query($n['elements']);}unset($n);};$set_query($browser_data);Elementor\Plugin::$instance->documents->get($preview)->save(['elements'=>$browser_data,'settings'=>[]]);(new SuiteEdge\Migrator\Elementor\CssRegenerator())->regenerate($preview);
+file_put_contents(getenv('SUITEEDGE_QA_EVIDENCE').'/post-grid-wordpress-'.(defined('DB_ENGINE')?'sqlite':'mariadb').'.json',wp_json_encode(['assertions'=>$checks,'version'=>SUITEEDGE_MIGRATOR_VERSION,'url'=>get_permalink($preview),'page_id'=>$preview,'job_id'=>$job->id,'template_id'=>$template,'category_slug'=>$category->slug,'post_ids'=>$ids,'source_hash'=>hash('sha256',$json),'warnings'=>$builder->warnings],JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES));
+echo 'PASS: '.$checks.' automatic post-grid WordPress assertions'.PHP_EOL;

@@ -1,0 +1,708 @@
+{
+  "date": "2026-10-08",
+  "version": "1.3.2",
+  "source_sha256": "afebd8dc3695ce53da85bbf666e32b7e1eba34e9870d5a160b8b5bbd80c47ac9",
+  "source_scope": "Page layout only; global templates and external overlays absent. Source Theme Customizer fonts explicitly confirmed, not automatically extracted.",
+  "standalone": [
+    {
+      "runtime": "8.3.35",
+      "test": "tests/block-layout.php",
+      "assertions": 27,
+      "passed": true
+    },
+    {
+      "runtime": "8.3.35",
+      "test": "tests/attachment-links.php",
+      "assertions": 39,
+      "passed": true
+    },
+    {
+      "runtime": "8.3.35",
+      "test": "tests/business-compositions.php",
+      "assertions": 88,
+      "passed": true
+    },
+    {
+      "runtime": "8.3.35",
+      "test": "tests/post-grid.php",
+      "assertions": 53,
+      "passed": true
+    },
+    {
+      "runtime": "8.3.35",
+      "test": "tests/parser-limits.php",
+      "assertions": 9,
+      "passed": true
+    },
+    {
+      "runtime": "8.3.35",
+      "test": "tests/fonts.php",
+      "assertions": 50,
+      "passed": true
+    },
+    {
+      "runtime": "8.3.35",
+      "test": "tests/accuracy.php",
+      "assertions": 48,
+      "passed": true
+    },
+    {
+      "runtime": "8.3.35",
+      "test": "tests/run.php",
+      "assertions": 122,
+      "passed": true
+    },
+    {
+      "runtime": "8.3.35",
+      "test": "tests/motion.php",
+      "assertions": 24,
+      "passed": true
+    },
+    {
+      "runtime": "8.3.35",
+      "test": "tests/text-decoration.php",
+      "assertions": 23,
+      "passed": true
+    },
+    {
+      "runtime": "8.3.35",
+      "test": "tests/footer.php",
+      "assertions": 31,
+      "passed": true
+    },
+    {
+      "runtime": "8.3.35",
+      "test": "tests/customers.php",
+      "assertions": 44,
+      "passed": true
+    },
+    {
+      "runtime": "8.3.35",
+      "test": "tests/improvements.php",
+      "assertions": 38,
+      "passed": true
+    },
+    {
+      "runtime": "8.3.35",
+      "test": "tests/report-warnings.php",
+      "assertions": 22,
+      "passed": true
+    },
+    {
+      "runtime": "8.3.35",
+      "test": "test_pipeline.php",
+      "assertions": null,
+      "passed": true
+    },
+    {
+      "runtime": "8.0.30",
+      "test": "tests/block-layout.php",
+      "assertions": 27,
+      "passed": true
+    },
+    {
+      "runtime": "8.0.30",
+      "test": "tests/attachment-links.php",
+      "assertions": 39,
+      "passed": true
+    },
+    {
+      "runtime": "8.0.30",
+      "test": "tests/business-compositions.php",
+      "assertions": 88,
+      "passed": true
+    },
+    {
+      "runtime": "8.0.30",
+      "test": "tests/post-grid.php",
+      "assertions": 53,
+      "passed": true
+    },
+    {
+      "runtime": "8.0.30",
+      "test": "tests/parser-limits.php",
+      "assertions": 9,
+      "passed": true
+    },
+    {
+      "runtime": "8.0.30",
+      "test": "tests/fonts.php",
+      "assertions": 50,
+      "passed": true
+    },
+    {
+      "runtime": "8.0.30",
+      "test": "tests/accuracy.php",
+      "assertions": 48,
+      "passed": true
+    },
+    {
+      "runtime": "8.0.30",
+      "test": "tests/run.php",
+      "assertions": 122,
+      "passed": true
+    },
+    {
+      "runtime": "8.0.30",
+      "test": "tests/motion.php",
+      "assertions": 24,
+      "passed": true
+    },
+    {
+      "runtime": "8.0.30",
+      "test": "tests/text-decoration.php",
+      "assertions": 23,
+      "passed": true
+    },
+    {
+      "runtime": "8.0.30",
+      "test": "tests/footer.php",
+      "assertions": 31,
+      "passed": true
+    },
+    {
+      "runtime": "8.0.30",
+      "test": "tests/customers.php",
+      "assertions": 44,
+      "passed": true
+    },
+    {
+      "runtime": "8.0.30",
+      "test": "tests/improvements.php",
+      "assertions": 38,
+      "passed": true
+    },
+    {
+      "runtime": "8.0.30",
+      "test": "tests/report-warnings.php",
+      "assertions": 22,
+      "passed": true
+    },
+    {
+      "runtime": "8.0.30",
+      "test": "test_pipeline.php",
+      "assertions": null,
+      "passed": true
+    }
+  ],
+  "integration": {
+    "sqlite": [
+      {
+        "test": "block-layout-wordpress",
+        "assertions": 19,
+        "passed": true
+      },
+      {
+        "test": "attachment-links-wordpress",
+        "assertions": 135,
+        "passed": true
+      },
+      {
+        "test": "business-compositions-wordpress",
+        "assertions": 42,
+        "passed": true
+      },
+      {
+        "test": "post-grid-wordpress",
+        "assertions": 41,
+        "passed": true
+      },
+      {
+        "test": "accuracy-wordpress",
+        "assertions": 45,
+        "passed": true
+      },
+      {
+        "test": "module-replacements-wordpress",
+        "assertions": 38,
+        "passed": true
+      },
+      {
+        "test": "source-links-wordpress",
+        "assertions": 38,
+        "passed": true
+      },
+      {
+        "test": "apply-concurrency-wordpress",
+        "assertions": 12,
+        "passed": true
+      },
+      {
+        "test": "wordpress",
+        "assertions": 166,
+        "passed": true
+      },
+      {
+        "test": "production",
+        "assertions": 30,
+        "passed": true
+      },
+      {
+        "test": "home",
+        "assertions": 40,
+        "passed": true
+      },
+      {
+        "test": "recommended-settings",
+        "assertions": 39,
+        "passed": true
+      },
+      {
+        "test": "template-import",
+        "assertions": 14,
+        "passed": true
+      },
+      {
+        "test": "motion-wordpress",
+        "assertions": 20,
+        "passed": true
+      },
+      {
+        "test": "text-decoration-wordpress",
+        "assertions": 29,
+        "passed": true
+      },
+      {
+        "test": "footer-wordpress",
+        "assertions": 34,
+        "passed": true
+      },
+      {
+        "test": "customers-wordpress",
+        "assertions": 39,
+        "passed": true
+      },
+      {
+        "test": "improvements-wordpress",
+        "assertions": 49,
+        "passed": true
+      },
+      {
+        "test": "header-wordpress",
+        "assertions": 44,
+        "passed": true
+      },
+      {
+        "test": "report-warnings-wordpress",
+        "assertions": 26,
+        "passed": true
+      },
+      {
+        "test": "theme-builder-wordpress",
+        "assertions": 52,
+        "passed": true
+      },
+      {
+        "test": "fonts-wordpress",
+        "assertions": 3348,
+        "passed": true
+      }
+    ],
+    "mariadb": [
+      {
+        "test": "block-layout-wordpress",
+        "assertions": 19,
+        "passed": true
+      },
+      {
+        "test": "attachment-links-wordpress",
+        "assertions": 135,
+        "passed": true
+      },
+      {
+        "test": "business-compositions-wordpress",
+        "assertions": 42,
+        "passed": true
+      },
+      {
+        "test": "post-grid-wordpress",
+        "assertions": 41,
+        "passed": true
+      },
+      {
+        "test": "accuracy-wordpress",
+        "assertions": 45,
+        "passed": true
+      },
+      {
+        "test": "module-replacements-wordpress",
+        "assertions": 38,
+        "passed": true
+      },
+      {
+        "test": "source-links-wordpress",
+        "assertions": 38,
+        "passed": true
+      },
+      {
+        "test": "apply-concurrency-wordpress",
+        "assertions": 12,
+        "passed": true
+      },
+      {
+        "test": "wordpress",
+        "assertions": 166,
+        "passed": true
+      },
+      {
+        "test": "production",
+        "assertions": 30,
+        "passed": true
+      },
+      {
+        "test": "home",
+        "assertions": 40,
+        "passed": true
+      },
+      {
+        "test": "recommended-settings",
+        "assertions": 39,
+        "passed": true
+      },
+      {
+        "test": "template-import",
+        "assertions": 14,
+        "passed": true
+      },
+      {
+        "test": "motion-wordpress",
+        "assertions": 20,
+        "passed": true
+      },
+      {
+        "test": "text-decoration-wordpress",
+        "assertions": 29,
+        "passed": true
+      },
+      {
+        "test": "footer-wordpress",
+        "assertions": 34,
+        "passed": true
+      },
+      {
+        "test": "customers-wordpress",
+        "assertions": 39,
+        "passed": true
+      },
+      {
+        "test": "improvements-wordpress",
+        "assertions": 49,
+        "passed": true
+      },
+      {
+        "test": "header-wordpress",
+        "assertions": 44,
+        "passed": true
+      },
+      {
+        "test": "report-warnings-wordpress",
+        "assertions": 26,
+        "passed": true
+      },
+      {
+        "test": "theme-builder-wordpress",
+        "assertions": 52,
+        "passed": true
+      },
+      {
+        "test": "fonts-wordpress",
+        "assertions": 3348,
+        "passed": true
+      }
+    ]
+  },
+  "browser": {
+    "new_surface_assertions": 1124,
+    "viewports": [
+      320,
+      390,
+      767,
+      768,
+      980,
+      981,
+      1440,
+      1920
+    ],
+    "public_source_geometry": [
+      {
+        "width": 390,
+        "matching_caption_widths": 32,
+        "source_caption_width": 351,
+        "converted_caption_width": 351,
+        "hero_height": 200,
+        "main_background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 980,
+        "matching_caption_widths": 32,
+        "source_caption_width": 882,
+        "converted_caption_width": 882,
+        "hero_height": 300,
+        "main_background": "rgb(255, 255, 255)"
+      },
+      {
+        "width": 1920,
+        "matching_caption_widths": 32,
+        "source_caption_width": 541.4375,
+        "converted_caption_width": 541.4375,
+        "hero_height": 500,
+        "main_background": "rgb(255, 255, 255)"
+      }
+    ],
+    "previous_pool_assertions": 321,
+    "cta_person_assertions": 185,
+    "private_source_fonts_for_screenshots": true,
+    "rerun_after_archive_install_completed": false
+  },
+  "package": {
+    "version": "1.3.2",
+    "public_download": "ace-divi-to-elementor-migrator-1.3.2.zip",
+    "files": 180,
+    "bytes": 1541237,
+    "sha256": "4a912f27d01ba18783c3b4b6d87c838ff4bdf823b1190823c3f0deb214d438ad",
+    "syntax": [
+      {
+        "runtime": "8.3.35",
+        "files": 210,
+        "passed": true
+      },
+      {
+        "runtime": "8.0.30",
+        "files": 210,
+        "passed": true
+      }
+    ],
+    "source_matches_archive": true,
+    "tests_and_private_fixtures_excluded": true,
+    "included": [
+      "assets/css/admin.css",
+      "assets/css/converted-links.css",
+      "assets/css/post-grid.css",
+      "assets/icons/logo.png",
+      "assets/js/portable-effects.js",
+      "assets/js/portable-navigation.js",
+      "docs/COMPATIBILITY.md",
+      "docs/USER-GUIDE.md",
+      "languages/suiteedge-divi-elementor-migrator.pot",
+      "LICENSE",
+      "README.md",
+      "readme.txt",
+      "src/Admin/AjaxHandler.php",
+      "src/Admin/AnalysisPage.php",
+      "src/Admin/DashboardPage.php",
+      "src/Admin/ExportHandler.php",
+      "src/Admin/GuidePage.php",
+      "src/Admin/ImportPage.php",
+      "src/Admin/JobsPage.php",
+      "src/Admin/MappingPage.php",
+      "src/Admin/Menu.php",
+      "src/Admin/ReportPage.php",
+      "src/Admin/RequestGuard.php",
+      "src/Admin/SettingsPage.php",
+      "src/Admin/ThemeBuilderPage.php",
+      "src/Admin/View.php",
+      "src/Assets/AssetProcessor.php",
+      "src/Assets/AssetResolver.php",
+      "src/Assets/AssetScanner.php",
+      "src/Assets/DuplicateDetector.php",
+      "src/Assets/EmbeddedImageImporter.php",
+      "src/Assets/MediaImporter.php",
+      "src/Assets/UrlRewriter.php",
+      "src/Backup/BackupManager.php",
+      "src/Backup/Rollback.php",
+      "src/Backup/Snapshot.php",
+      "src/Database/SchemaInstaller.php",
+      "src/Divi/AttributeParser.php",
+      "src/Divi/DynamicContentParser.php",
+      "src/Divi/GlobalModuleResolver.php",
+      "src/Divi/PresetResolver.php",
+      "src/Divi/Scanner.php",
+      "src/Divi/ShortcodeParser.php",
+      "src/Divi/ShortcodeTokenizer.php",
+      "src/Dynamic/AcfMapper.php",
+      "src/Dynamic/DynamicMapper.php",
+      "src/Dynamic/PageLinkResolver.php",
+      "src/Dynamic/PostLinkBinding.php",
+      "src/Dynamic/PostMapper.php",
+      "src/Dynamic/SiteLinkResolver.php",
+      "src/Dynamic/SourceLinkSettings.php",
+      "src/Dynamic/WooMapper.php",
+      "src/Elementor/Atomic/ElementBuilder.php",
+      "src/Elementor/Atomic/Serializer.php",
+      "src/Elementor/Atomic/StyleBuilder.php",
+      "src/Elementor/Classic/ContainerBuilder.php",
+      "src/Elementor/Classic/ResponsiveCss.php",
+      "src/Elementor/Classic/Serializer.php",
+      "src/Elementor/Classic/WidgetBuilder.php",
+      "src/Elementor/ConvertedLinkStyles.php",
+      "src/Elementor/CssRegenerator.php",
+      "src/Elementor/DocumentBuilder.php",
+      "src/Elementor/FontAvailability.php",
+      "src/Elementor/IdGenerator.php",
+      "src/Elementor/PageWriter.php",
+      "src/Elementor/Posts/GridQuery.php",
+      "src/Elementor/Posts/GridWidget.php",
+      "src/Elementor/Posts/Register.php",
+      "src/Elementor/TargetResolver.php",
+      "src/Elementor/Validator.php",
+      "src/Forms/DiviContactFormParser.php",
+      "src/Forms/ElementorFormBuilder.php",
+      "src/Forms/EmailOptinConverter.php",
+      "src/Forms/FormReviewReport.php",
+      "src/Import/BackupEngine.php",
+      "src/Import/BatchImport.php",
+      "src/Import/DiviExportDetector.php",
+      "src/Import/DiviExportReader.php",
+      "src/Import/MenuMapping.php",
+      "src/Import/RecommendedSettings.php",
+      "src/Import/SourceMenuPresentation.php",
+      "src/Import/SourceRepository.php",
+      "src/Import/TemplateReplacement.php",
+      "src/Import/UploadValidator.php",
+      "src/Jobs/BatchRunner.php",
+      "src/Jobs/Job.php",
+      "src/Jobs/JobRepository.php",
+      "src/Jobs/LockBusyException.php",
+      "src/Jobs/LockLostException.php",
+      "src/Jobs/LockManager.php",
+      "src/Jobs/SavedOutputApplier.php",
+      "src/Mapping/AttributeCoverage.php",
+      "src/Mapping/BaseConverter.php",
+      "src/Mapping/CommonConverter.php",
+      "src/Mapping/Core/AccordionConverter.php",
+      "src/Mapping/Core/BlurbConverter.php",
+      "src/Mapping/Core/BusinessComposition.php",
+      "src/Mapping/Core/ButtonConverter.php",
+      "src/Mapping/Core/CallToActionConverter.php",
+      "src/Mapping/Core/CodeConverter.php",
+      "src/Mapping/Core/ColumnConverter.php",
+      "src/Mapping/Core/DividerConverter.php",
+      "src/Mapping/Core/GalleryConverter.php",
+      "src/Mapping/Core/HeadingConverter.php",
+      "src/Mapping/Core/IconConverter.php",
+      "src/Mapping/Core/ImageConverter.php",
+      "src/Mapping/Core/MapConverter.php",
+      "src/Mapping/Core/MenuConverter.php",
+      "src/Mapping/Core/NumberCounterConverter.php",
+      "src/Mapping/Core/PersonConverter.php",
+      "src/Mapping/Core/RowConverter.php",
+      "src/Mapping/Core/SectionConverter.php",
+      "src/Mapping/Core/SocialMediaFollowConverter.php",
+      "src/Mapping/Core/TabsConverter.php",
+      "src/Mapping/Core/TestimonialConverter.php",
+      "src/Mapping/Core/TextConverter.php",
+      "src/Mapping/Core/ToggleConverter.php",
+      "src/Mapping/Core/VideoConverter.php",
+      "src/Mapping/IconMapper.php",
+      "src/Mapping/IdMapper.php",
+      "src/Mapping/MappingResult.php",
+      "src/Mapping/ModuleRegistry.php",
+      "src/Mapping/Pro/ContactFormConverter.php",
+      "src/Mapping/Pro/PricingTableConverter.php",
+      "src/Mapping/Pro/PricingTablesConverter.php",
+      "src/Mapping/ThirdParty/BlogGridConverter.php",
+      "src/Mapping/Woo/ProductTitleConverter.php",
+      "src/Model/AssetReference.php",
+      "src/Model/ConversionResult.php",
+      "src/Model/Document.php",
+      "src/Model/DynamicBinding.php",
+      "src/Model/Node.php",
+      "src/Model/ResponsiveValue.php",
+      "src/Model/StyleBag.php",
+      "src/Normalize/AttributeNormalizer.php",
+      "src/Normalize/BlurbContentNormalizer.php",
+      "src/Normalize/ContentNormalizer.php",
+      "src/Normalize/DocumentNormalizer.php",
+      "src/Normalize/ResponsiveNormalizer.php",
+      "src/Normalize/StyleNormalizer.php",
+      "src/Normalize/UnitNormalizer.php",
+      "src/Plugin.php",
+      "src/Reports/AssetReport.php",
+      "src/Reports/ExportReport.php",
+      "src/Reports/JobOutcome.php",
+      "src/Reports/ModuleCoverageReport.php",
+      "src/Reports/ReportBuilder.php",
+      "src/Reports/WarningReport.php",
+      "src/Requirements.php",
+      "src/Storage/Retention.php",
+      "src/Style/AccordionTranslator.php",
+      "src/Style/BackgroundTranslator.php",
+      "src/Style/BorderTranslator.php",
+      "src/Style/ButtonIconTranslator.php",
+      "src/Style/CssFallbackTranslator.php",
+      "src/Style/CustomCssTranslator.php",
+      "src/Style/FilterTranslator.php",
+      "src/Style/FontFamily.php",
+      "src/Style/HoverTranslator.php",
+      "src/Style/ListTypographyTranslator.php",
+      "src/Style/MenuTranslator.php",
+      "src/Style/MotionTranslator.php",
+      "src/Style/PositionTranslator.php",
+      "src/Style/RowLayoutTranslator.php",
+      "src/Style/ScopedCssTranslator.php",
+      "src/Style/ShadowTranslator.php",
+      "src/Style/ShapeDividerTranslator.php",
+      "src/Style/SizingTranslator.php",
+      "src/Style/SourceThemeProfile.php",
+      "src/Style/SpacingTranslator.php",
+      "src/Style/StickyTranslator.php",
+      "src/Style/TextDecorationTranslator.php",
+      "src/Style/TransformTranslator.php",
+      "src/Style/TypographyTranslator.php",
+      "src/Style/VisibilityTranslator.php",
+      "src/Support/Arr.php",
+      "src/Support/Json.php",
+      "src/Support/Logger.php",
+      "src/Support/Strings.php",
+      "suiteedge-divi-elementor-migrator.php"
+    ]
+  },
+  "package_install": {
+    "sha256": "4a912f27d01ba18783c3b4b6d87c838ff4bdf823b1190823c3f0deb214d438ad",
+    "sites": [
+      {
+        "backend": "sqlite",
+        "installed_archive": true,
+        "all_bytes_match": true,
+        "version": "1.3.2"
+      },
+      {
+        "backend": "mariadb",
+        "installed_archive": true,
+        "all_bytes_match": true,
+        "version": "1.3.2"
+      }
+    ]
+  },
+  "installed_tests": [
+    {
+      "backend": "sqlite",
+      "test": "block-layout-wordpress",
+      "assertions": 19,
+      "passed": true
+    },
+    {
+      "backend": "sqlite",
+      "test": "attachment-links-wordpress",
+      "assertions": 135,
+      "passed": true
+    },
+    {
+      "backend": "mariadb",
+      "test": "block-layout-wordpress",
+      "assertions": 19,
+      "passed": true
+    },
+    {
+      "backend": "mariadb",
+      "test": "attachment-links-wordpress",
+      "assertions": 135,
+      "passed": true
+    }
+  ],
+  "plugin_check_findings": [],
+  "feature_areas": 98,
+  "method_class_rows": 368,
+  "actual_staging_modified": false,
+  "universal_visual_fidelity_claimed": false
+}
